@@ -1,12 +1,16 @@
+# 准备工作
 1. 准备工作
 
 1.1 前置环境准备——安装Maven
 基于Maven管理项目的构建，需要先安装好相应的版本。
 
 1.2 开发工具
-系统采用IDEA作为开发工具。但不局限于Eclipse。此处仅介绍在IDEA搭建开发环境所需的操作。
+系统采用IDEA作为开发工具。但不局限于IDEA。
+
 2. 开发环境搭建
+
 2.1 开发工具的配置
+
 2.1.1 配置Maven
 进入Window->Preferences->Maven->Installations页面，设置已经安装好的Maven
 
@@ -17,20 +21,23 @@
 进入Window->Preferences->Validation页面，勾选“Suspend all validators”，关闭校验
 
 2.2 导入工程
-通过Eclipse导入工程，步骤如下：
+通过IDEA导入工程，步骤如下：
 (1)点击左侧项目区域—>Import...
 
 (2)选择RuoYi 
   
 (3)点击Finish
 
-(4)RuoYi的代码就被导出到Eclipse中了，此时可以在工程视图中看到。
+(4)RuoYi的代码就被导出到IDEA中了，此时可以在工程视图中看到。
 
-3. 运行若依系统
+3. 运行系统
+   
 3.1 必要的配置
+
 3.1.1 修改数据库连接
 编辑src/main/ resources目录下的application-druid.yml 文件，修改数据库地址账号信息。
 执行sql/ ry_20180423.sql，quartz.sql 两个文件 日期随版本变化
+
 3.1.2 开发环境配置
 编辑src/main/ resources目录下的application.yml 文件，
 默认端口为80
@@ -65,7 +72,7 @@ npm run dev
 打开浏览器，输入：http://localhost:80 （默认账户 admin/admin123）
 若能正确展示登录页面，并能成功登录，菜单及页面展示正常，则表明环境搭建成功
 注意：执行npm命令需要配置node环境
-4. 部署若依系统
+4. 部署系统
 4.1 war部署方式
 4.1.1 修改pom.xml文件。将jar修改为war
 
